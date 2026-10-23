@@ -1,212 +1,30 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İstanbul Gezi Rehberi - Gezi Rotası</title>
-  
-  <!-- Font Awesome & Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Sizin Özel CSS Dosyanız -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Google SEO & Yapısal Veri -->
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://dogamanzara243-hue.github.io/gezi-rotasi-istanbul-tarihi-yerler/">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristAttraction",
-      "name": "Istanbul Tarihi Yerler",
-      "description": "İstanbul gezi rehberi, ulaşım, otel ve restoran önerileri.",
-      "url": "https://dogamanzara243-hue.github.io/gezi-rotasi-istanbul-tarihi-yerler/"
-    }
-    </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Vitrini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[var(--bg-slate)] text-[var(--text-dark)] antialiased">
-
-  <!-- Üst Reklam Banner -->
-  <div class="container mx-auto px-4">
-    <div class="ad-banner-top">
-      <span>— Reklam Alanı (970x90 Banner) —</span>
-    </div>
-  </div>
-
-  <!-- Header -->
-      <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <nav class="flex items-center space-x-2 sm:space-x-3 text-sm font-medium">
-                <a href="javascript:history.back()" class="flex items-center text-slate-600 hover:text-theme transition-colors py-1 px-2.5 rounded-lg hover:bg-slate-100" title="Önceki Sayfaya Dön">
-                    <i class="fa-solid fa-arrow-left mr-2"></i>
-                    <span class="hidden sm:inline">Önceki Sayfa</span>
-                </a>
-                <span class="text-slate-300">/</span>
-                <a href="https://dogamanzara243-hue.github.io/gezi-rotasi/" class="flex items-center text-slate-600 hover:text-theme transition-colors p-1.5 rounded-lg hover:bg-slate-100" title="Ana Sayfaya Dön">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="ml-1.5 hidden md:inline">Ana Sayfa</span>
-                </a>
-                <span class="text-slate-300">/</span>
-                <span id="breadcrumb-city" class="text-slate-500 font-normal">İstanbul</span>
-                <span class="text-slate-300">/</span>
-                <span id="breadcrumb-title" class="text-theme-dark font-semibold truncate max-w-[140px] sm:max-w-none"></span>
-            </nav>
-
-            <div class="flex items-center space-x-1 sm:space-x-2">
-                <button id="btn-favorite" class="p-2 text-slate-500 hover:text-rose-500 hover:bg-rose-50 rounded-full transition-all" title="Favorilere Ekle">
-                    <i class="fa-regular fa-heart text-lg"></i>
-                </button>
-                <button id="btn-share" class="p-2 text-slate-500 hover:text-theme hover:bg-slate-100 rounded-full transition-all" title="Sayfayı Paylaş">
-                    <i class="fa-solid fa-share-nodes text-lg"></i>
-                </button>
-            </div>
+<body class="bg-slate-50 text-slate-800 antialiased">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="../" class="font-bold text-slate-900 flex items-center gap-2 hover:text-amber-600 transition-colors text-sm">
+                <i class="fa-solid fa-arrow-left"></i> Ana Rehbere Dön
+            </a>
+            <span id="header-badge" class="text-xs font-semibold px-3 py-1 bg-amber-50 text-amber-700 rounded-full">Kategori Rehberi</span>
         </div>
     </header>
-
-  <!-- Hero Alanı -->
-  <section class="relative bg-slate-900 text-white py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1600&q=80');"></div>
-    <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-      <span class="bg-[var(--primary)] text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full text-white inline-block mb-3">Şehir Rehberi</span>
-      <h1 id="hero-title" class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Yükleniyor...</h1>
-      <p id="hero-desc" class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">...</p>
-    </div>
-  </section>
-
-  <!-- Ana İçerik -->
-  <main class="container mx-auto px-4 py-12">
-
-        <!-- Dinamik Arama ve Kategori Filtreleme Alanı -->
-        <div id="dynamic-search-filter-section" class="mb-10 max-w-4xl mx-auto px-2">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                <div class="relative w-full md:w-1/2">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                    <input type="text" id="destination-search-input" placeholder="Mekân, semt veya kategori ara..." class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
-                </div>
-                <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 text-xs font-medium" id="category-filter-buttons">
-                    <button data-filter="all" class="filter-btn active bg-slate-900 text-white px-3.5 py-2 rounded-xl transition-all">Tümü</button>
-                    <button data-filter="history" class="filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition-all">Tarih</button>
-                    <button data-filter="sea" class="filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition-all">Manzara</button>
-                    <button data-filter="museum" class="filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition-all">Müze</button>
-                </div>
-            </div>
+    <main class="max-w-6xl mx-auto px-4 py-10">
+        <div class="mb-10 text-center md:text-left">
+            <h1 id="page-title" class="text-3xl font-extrabold text-slate-900">Yükleniyor...</h1>
+            <p id="page-desc" class="text-slate-600 mt-2 text-base">Detaylı mekan listesi yükleniyor.</p>
         </div>
-
-    <div class="mb-10 text-center max-w-2xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3">Nereyi Keşfetmek İstersiniz?</h2>
-      <p class="text-[var(--text-muted)]">Kategoriyi seçerek detaylı rehberlere ulaşın.</p>
-    </div>
-
-    <!-- JSON Verisinden Otomatik Beslenen Kartlar -->
-    <div id="categories-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- JavaScript buraya dinamik kartları aktarır -->
-    </div>
-
-    <!-- Makale İçi Reklam / Affiliate Kartı -->
-    <div class="mt-12">
-      <div class="ad-in-article flex-col p-6 text-center">
-        <i class="fa-solid fa-hotel text-3xl mb-2 text-[var(--primary)]"></i>
-        <span class="text-base font-bold text-[var(--text-dark)] mb-1">İstanbul'da Nerede Kalınır?</span>
-        <p class="text-xs text-[var(--text-muted)] max-w-md mb-4">Sizin için seçtiğimiz en iyi boğaz manzaralı ve merkezi otel fırsatlarını karşılaştırın.</p>
-        <a href="#" class="bg-[var(--text-dark)] text-white text-xs font-bold px-5 py-2.5 rounded-lg hover:bg-[var(--primary)] transition-colors">
-          Otel Fırsatlarını İncele <i class="fa-solid fa-external-link ml-1"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- Ulaşım ve Genel Bilgi -->
-    <section class="mt-16 bg-white rounded-2xl border border-[var(--border-light)] p-6 md:p-8 shadow-sm">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <span class="text-[var(--primary)] font-bold text-xs uppercase tracking-wider">İpuçları & Rehber</span>
-          <h3 id="transport-title" class="text-2xl font-bold mt-1 mb-4">...</h3>
-          <p id="transport-desc" class="text-[var(--text-muted)] text-sm mb-4 leading-relaxed">...</p>
-          <ul id="transport-tips" class="space-y-2 text-sm text-[var(--text-dark)] font-medium mb-6"></ul>
-        </div>
-        <div class="aspect-map bg-slate-100 relative">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.7932761803!2d28.847372722108708!3d41.00549580922881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1cc7a98632128a1!2zxLBzdGFuYnVs!52e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-white border-t border-[var(--border-light)] mt-16 py-8 text-center text-xs text-[var(--text-muted)]">
-    <p>© 2026 Gezi Rotası - Modüler Rehber Sistemi</p>
-  </footer>
-
-  <!-- Dinamik Script -->
-  <script src="./assets/js/app.js"></script>
-
-<script>
-    // Otomatik Eklenen Kullanıcı Deneyimi ve Arama/Filtre İyileştirmesi
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("Gezi Rehberi Akıllı Arayüz Aktif 🚀");
-        // Kartlara hover ve animasyon efekti desteği
-        const cards = document.querySelectorAll('.grid > div');
-        cards.forEach(card => {
-            card.classList.add('transition-all', 'duration-300');
-        });
-    });
-</script>
-
-
-    <!-- Interaktif Arama, Filtreleme ve Back to Top Butonu Scripti -->
-    <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white p-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 focus:outline-none" title="Yukarı Çık">
-        <i class="fa-solid fa-arrow-up text-base"></i>
-    </button>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Back to top butonu kontrolü
-        const topBtn = document.getElementById("back-to-top-btn");
-        if(topBtn) {
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    topBtn.classList.remove("opacity-0", "pointer-events-none");
-                    topBtn.classList.add("opacity-100");
-                } else {
-                    topBtn.classList.add("opacity-0", "pointer-events-none");
-                    topBtn.classList.remove("opacity-100");
-                }
-            });
-            topBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        }
-
-        // Canlı Arama ve Filtreleme Mantığı
-        const searchInput = document.getElementById("destination-search-input");
-        const filterBtns = document.querySelectorAll(".filter-btn");
-
-        function filterContent() {
-            const query = searchInput ? searchInput.value.toLowerCase() : "";
-            const activeBtn = document.querySelector(".filter-btn.active");
-            const filterValue = activeBtn ? activeBtn.getAttribute("data-filter") : "all";
-
-            const cards = document.querySelectorAll("#why-visit-cards > div, #must-see-items > div, .grid > div");
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                const matchesSearch = text.includes(query);
-                card.style.display = matchesSearch ? "" : "none";
-            });
-        }
-
-        if(searchInput) searchInput.addEventListener("input", filterContent);
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove("active", "bg-slate-900", "text-white");
-                    b.classList.add("bg-slate-100", "text-slate-700");
-                });
-                btn.classList.add("active", "bg-slate-900", "text-white");
-                btn.classList.remove("bg-slate-100", "text-slate-700");
-                filterContent();
-            });
-        });
-    });
-    </script>
-
+        <div id="items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </main>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
-  </html>
+</html>

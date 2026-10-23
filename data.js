@@ -4,24 +4,29 @@ const DETAIL_DATA = {
     "badge": "Tarihi Yerler",
     "items": [
         {
-            "title": "Ayasofya Camii",
-            "desc": "1500 yıllık mimarlık ve inanç mirası devasa yapı."
+            "category": "Popüler Nokta 1",
+            "title": "Önemli Mekan 1 - Istanbul",
+            "desc": "Istanbul şehrinin en çok ziyaret edilen gözde lokasyonlarından biri."
         },
         {
-            "title": "Sultanahmet Camii",
-            "desc": "Mavi çinileriyle dünyaca ün salmış tarihi ibadethane."
+            "category": "Popüler Nokta 2",
+            "title": "Önemli Mekan 2 - Istanbul",
+            "desc": "Tarihi ve kültürel dokusuyla büyüleyen özel bir nokta."
         },
         {
-            "title": "Topkapı Sarayı",
-            "desc": "Osmanlı padişahlarının yüzyıllar boyu yönetim merkezi."
+            "category": "Popüler Nokta 3",
+            "title": "Önemli Mekan 3 - Istanbul",
+            "desc": "Gezginlerin rotasından eksik etmediği popüler bir durak."
         },
         {
-            "title": "Yerebatan Sarnıcı",
-            "desc": "Medusa başlı gizemli yeraltı su sarnıcı sütunları."
+            "category": "Popüler Nokta 4",
+            "title": "Önemli Mekan 4 - Istanbul",
+            "desc": "Mimari ve doğal güzellikleriyle göz kamaştıran bölge."
         },
         {
-            "title": "Galata Kulesi",
-            "desc": "Cenevizlilerden kalan 360 derece İstanbul izleme kulesi."
+            "category": "Popüler Nokta 5",
+            "title": "Önemli Mekan 5 - Istanbul",
+            "desc": "Istanbul keşif turunun vazgeçilmez simgelerinden biri."
         }
     ]
 };

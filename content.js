@@ -4,10 +4,16 @@ const CONTENT_DATA = {
     "badge": "Tarihi Yerler",
     "category": [
         {
-            "category": "Tarihi Yerler",
-            "title": "Önemli Mekan 1 - Istanbul",
-            "desc": "Istanbul şehrinde mutlaka görülmesi gereken gözde konum."
-        },
+              
+    "id": "ayasofya-camii",
+    "title": "Ayasofya-i Kebir Cami-i Şerifi",
+    "category_badge": "UNESCO & Dünya Mirası",
+    "badge_icon": "fa-mosque",
+    "image": "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
+    "description": "Mimarlık tarihinin en büyük şaheserlerinden biri olan Ayasofya, devasa kubbesi, eşsiz mozaikleri ve asırlık tarihiyle Doğu ile Batı'nın buluşma noktasıdır. Yüzyıllar boyunca imparatorluklara ev sahipliği yapmış bu efsanevi yapı İstanbul'un kalbidir.",
+    "target_url": "https://dogamanzara243-hue.github.io/gezi-rotasi-ayasofya-camii/",
+    "button_text": "Mabedi Keşfet"
+              },
         {
             "category": "Tarihi Yerler",
             "title": "Önemli Mekan 2 - Istanbul",
